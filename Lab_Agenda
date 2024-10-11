@@ -55,3 +55,5 @@ switch(accion){
 
 }
 }
+console.log("Esta agenda es muy chula");
+
