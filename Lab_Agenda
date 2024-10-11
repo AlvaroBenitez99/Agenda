@@ -1,0 +1,57 @@
+let contacts = [{
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+}, {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+}];
+let accion= prompt("Que acción quieres realizar entre ver el primer contacto, el ultimo o añadir uno nuevo","");
+let quit =true;
+while(quit===true){
+switch(accion){
+    case "añadir":
+       let newContact= {
+            name : window.prompt("Introduzca el nombre del nuevo usuario",""),
+            phone : window.prompt("Introduzca el teléfono del nuevo usuario",""),
+            email : window.prompt("Introduzca el email del nuevo usuario","")
+        }
+        if(newContact.name!="" && newContact.phone!=""&&newContact.email!=""){
+            contacts.push(newContact);
+            let ultimo=contacts.length-1;
+            console.log(contacts[ultimo]);
+
+        } else{
+            console.log("No se puede añadir porque falta un campo");
+        }
+        break;
+        case "Ver ultimo":
+            let ultimo=contacts.length-1;
+            console.log(contacts[ultimo]);
+            break;
+            case "Ver primero":
+                let primero=0;
+            console.log(contacts[primero]);
+            break;
+    
+            case "Ver todos":
+                for(let todoscontactos of contacts){
+                    console.log(todoscontactos);
+                    break;
+
+                }
+            case "parar":
+            seguir=false;
+
+
+            
+            
+
+
+}
+}
